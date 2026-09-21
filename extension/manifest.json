@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Xbox Snake Rig",
+  "version": "2.7",
+  "description": "Auto-arms the Xbox controller rig on snake.io: fire-repainted snake skin, monster truck head, blended steering, haptics, ad-stripping, menu navigation. No console pasting needed.",
+  "content_scripts": [
+    {
+      "matches": ["https://snake.io/*"],
+      "js": ["skinfire.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://snake.io/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}
